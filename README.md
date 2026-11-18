@@ -74,8 +74,7 @@ Security Detection Evidence
 The following screenshots document the implementation, testing, and validation of the SSH threat detection workflow.
 
 1. SOC Security Monitoring Dashboard
-
-
+![SOC Security Monitoring Dashboard](screenshots/01-security-dashboard.png)
 
 The Grafana dashboard provides centralized visibility into SSH authentication activity, including a summary of authentication failures, a time series visualization, and detailed security logs.
 

@@ -79,25 +79,24 @@ The following screenshots document the implementation, testing, and validation o
 The Grafana dashboard provides centralized visibility into SSH authentication activity, including a summary of authentication failures, a time series visualization, and detailed security logs.
 
 2. Failed SSH Authentication Logs
-
-
+   ![Failed SSH Authentication Logs](screenshots/02-failed-ssh-logs.png)
 
 Grafana Loki successfully collected authentication events generated during controlled SSH login attempts. The logs contain failed-password messages, invalid user activity, and associated timestamps.
 
 3. LogQL Security Investigation
 
-
+![LogQL Security Investigation](screenshots/03-logql-investigation.png)
 
 Using LogQL, I filtered authentication logs to identify failed SSH password attempts and examine the associated security events.
 
 4. Automated SSH Detection Alert
-
+![Grafana SSH Detection Alert](screenshots/04-alert-rule.png)
 
 
 Configured a Grafana-managed alert rule to detect five or more failed SSH password events within a five-minute observation window, with evaluations performed every minute.
 
 5. Automated Security Email Notification
-
+![Grafana Security Alert Email](screenshots/05-email-alert.png)
 
 
 Successfully validated the alerting workflow by generating controlled authentication failures that triggered a Grafana security notification with a Firing status.

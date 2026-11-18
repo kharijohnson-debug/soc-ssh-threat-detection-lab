@@ -68,6 +68,43 @@ Alert Validation: Confirmed that the detection rule identified simulated authent
 
 Security Analysis: Demonstrated how repeated authentication failures can serve as an indicator of potential credential-guessing activity requiring further investigation.
 
+
+Security Detection Evidence
+
+The following screenshots document the implementation, testing, and validation of the SSH threat detection workflow.
+
+1. SOC Security Monitoring Dashboard
+
+
+
+The Grafana dashboard provides centralized visibility into SSH authentication activity, including a summary of authentication failures, a time series visualization, and detailed security logs.
+
+2. Failed SSH Authentication Logs
+
+
+
+Grafana Loki successfully collected authentication events generated during controlled SSH login attempts. The logs contain failed-password messages, invalid user activity, and associated timestamps.
+
+3. LogQL Security Investigation
+
+
+
+Using LogQL, I filtered authentication logs to identify failed SSH password attempts and examine the associated security events.
+
+4. Automated SSH Detection Alert
+
+
+
+Configured a Grafana-managed alert rule to detect five or more failed SSH password events within a five-minute observation window, with evaluations performed every minute.
+
+5. Automated Security Email Notification
+
+
+
+Successfully validated the alerting workflow by generating controlled authentication failures that triggered a Grafana security notification with a Firing status.
+
+This confirmed that the detection rule and email notification process operated as intended during testing.
+
 Security Significance
 
 Repeated failed SSH authentication attempts may indicate password guessing, brute-force activity, or unauthorized access attempts.

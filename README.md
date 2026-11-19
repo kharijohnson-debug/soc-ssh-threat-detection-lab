@@ -138,3 +138,16 @@ Overall Outcome: Established a functioning security monitoring and detection wor
 Disclaimer
 
 All authentication testing was performed within an authorized, isolated lab environment for educational and defensive security purposes.
+
+## SOC Incident Investigation Report
+
+Following the successful implementation of the SSH threat detection lab, I documented a simulated security investigation to demonstrate practical SOC analysis and incident documentation skills.
+
+The report includes:
+- Investigation summary and detection methodology
+- Analysis of SSH authentication failures
+- LogQL detection logic and supporting evidence
+- Alert validation and investigation findings
+- Recommended security response procedures
+
+**[View Full SOC Incident Investigation Report](reports/ssh-incident-investigation.md)**
